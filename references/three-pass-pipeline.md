@@ -86,6 +86,34 @@ Pick the angles so they genuinely diverge — the comparison, the proof delivere
 
 Use it for a campaign, a home page, an announcement that goes out once. Not for a changelog.
 
+## The review council
+
+The panel above widens the *drafting*. The council widens the *checking*: instead of one reviewer looking for everything at once, several reviewers each get a single lens, and an arbiter merges them.
+
+It works because the failure modes are unrelated. A false claim, a reader who stops at line 2, a doubled CTA and a banned word are four different searches. One reviewer holding all four in mind does the first one well and the rest at half attention — and once it has found a P0, it stops looking as hard.
+
+Four lenses, each an Opus subagent given `agents/writing-reviewer.md` plus its own assignment. **A member reports only inside its lens** and stays silent elsewhere:
+
+| Lens | Looks for | Owns |
+| --- | --- | --- |
+| Facts & risk | every claim traced to the context or the repo; unshipped features; legal, medical, financial promises | P0 |
+| Reader | where the target persona stops reading, disbelieves, or fails to know what to do | P1 |
+| Structure & ask | format profile, length, one CTA, what happens after the yes | P1 |
+| Voice | banned words and synonyms, style rules from the samples, LLM tells | P1/P2 |
+
+Then one arbiter — Opus, given every member's output verbatim:
+
+- merges duplicates (three members flagging the same sentence is one finding);
+- **rejects any finding that does not quote the text** — an unanchored finding is noise;
+- resolves conflicts (the reader lens wants a line the voice lens wants cut) and says which won;
+- returns **one** ranked list and **one** verdict.
+
+Without the arbiter this degrades fast: four lists, overlapping severities, nothing the rewriter can act on.
+
+Cost: 6 calls, 5 of them Opus. Use it where being wrong is expensive — a campaign about to go to thousands of recipients, a home page, a public announcement, anything with a legal surface. For a normal piece, one reviewer with the rubric finds the same P0s at a fifth of the price.
+
+**Do not add lenses to make it feel thorough.** A fifth reviewer with no distinct search only produces findings the others already covered, and every extra member raises the odds of inflated severity — the failure mode the rubric warns about.
+
 ## Cost
 
 Three subagent calls, one of them on a deep model, per piece. For a cold email that is fine. For fifty variants of a subject line it is not: draft the variants in a single pass 1, review them in a single pass 2, and rewrite only the survivors.

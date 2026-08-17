@@ -108,6 +108,8 @@ Details, including what each pass returns, are in `references/three-pass-pipelin
 
 A campaign, a home page, a one-shot announcement: run three drafters in parallel on genuinely different angles, have the reviewer judge them against each other and graft the best lines into the winner, then rewrite once. Five calls, and it catches more than a second sequential loop does. See `references/three-pass-pipeline.md`.
 
+When being wrong is expensive — a campaign going to thousands, a home page, anything with a legal surface — widen the *checking* instead: four reviewers, one lens each (facts & risk, reader, structure & ask, voice), plus an arbiter that merges them into one ranked list and one verdict. Same file.
+
 Never answer "make it better" with more loops. Past two, the blocker is a missing fact or a decision only the user can make.
 
 ### Verdict handling
