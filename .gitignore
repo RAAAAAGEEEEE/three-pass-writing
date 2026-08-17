@@ -1,0 +1,12 @@
+# The context file belongs to the user's project, never to this repo
+.claude/writing-context.md
+
+# OS noise
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Editors
+.vscode/
+.idea/
+*.swp
