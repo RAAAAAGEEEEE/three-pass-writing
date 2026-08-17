@@ -5,7 +5,7 @@ Two ways to install. They produce the same behaviour — pick by how you manage 
 | | Plugin | Personal skill |
 | --- | --- | --- |
 | Command | `/three-pass-writing` | `/three-pass-writing` |
-| Updates | `claude plugin update` | `git pull` |
+| Updates | `claude plugin update three-pass-writing@three-pass-writing` | `git pull` |
 | Location | managed by Claude Code | `~/.claude/skills/three-pass-writing/` |
 | Editable in place | not meant to be | yes |
 | Team sharing | `--scope project` | manual |
@@ -80,10 +80,10 @@ claude plugin details three-pass-writing
 
 ## Update
 
-Plugin:
+Plugin — the qualified `plugin@marketplace` name is required here, the short name returns "Plugin not found":
 
 ```bash
-claude plugin update three-pass-writing
+claude plugin update three-pass-writing@three-pass-writing
 ```
 
 Personal skill:
