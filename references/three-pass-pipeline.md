@@ -66,6 +66,26 @@ Skipping is allowed, and saying so is mandatory.
 
 Never skip pass 2 on anything that leaves the building — outreach, a published post, landing copy, a customer-facing announcement.
 
+## Widen before you deepen
+
+Two full loops is the ceiling, and it is a real one: past it, each rewrite regresses the text toward the mean — smoother, safer, less able to survive a reader who gets twenty of these a day. The blocker at that point is a missing fact or a human decision, and no pass produces either.
+
+When a piece matters enough to spend more, spend it on **width**, not depth:
+
+```
+3 drafters in parallel, one angle each   (sonnet)
+        ↓
+   judge: pick one, graft the best lines from the losers, list the fixes   (opus)
+        ↓
+   rewriter                                                                (sonnet)
+```
+
+Five calls instead of four, and it finds more. A judge comparing three drafts sees what a reviewer facing one draft cannot: a claim only looks safe until a sibling draft states it differently. Measured on one real cold email, the panel caught two P0s that two sequential loops had missed, for about 6% more tokens.
+
+Pick the angles so they genuinely diverge — the comparison, the proof delivered first, the reader's own point of view. Three drafts of the same idea teach the judge nothing.
+
+Use it for a campaign, a home page, an announcement that goes out once. Not for a changelog.
+
 ## Cost
 
 Three subagent calls, one of them on a deep model, per piece. For a cold email that is fine. For fifty variants of a subject line it is not: draft the variants in a single pass 1, review them in a single pass 2, and rewrite only the survivors.

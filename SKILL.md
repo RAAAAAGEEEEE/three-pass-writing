@@ -104,6 +104,12 @@ Each subagent prompt must give access to: `.claude/writing-context.md`, the form
 
 Details, including what each pass returns, are in `references/three-pass-pipeline.md`.
 
+### When the piece is worth more than three passes
+
+A campaign, a home page, a one-shot announcement: run three drafters in parallel on genuinely different angles, have the reviewer judge them against each other and graft the best lines into the winner, then rewrite once. Five calls, and it catches more than a second sequential loop does. See `references/three-pass-pipeline.md`.
+
+Never answer "make it better" with more loops. Past two, the blocker is a missing fact or a decision only the user can make.
+
 ### Verdict handling
 
 Pass 2 returns a verdict: `SHIP`, `REWRITE`, or `RESTART`.

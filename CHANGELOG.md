@@ -4,6 +4,12 @@ All notable changes to this project are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.3.0] — 2026-08-18
+
+### Added
+
+- `references/three-pass-pipeline.md` and `SKILL.md` — a panel mode for high-stakes pieces: three drafters in parallel on divergent angles, a judge that picks one and grafts the best lines from the losers, then one rewrite. Measured on a real cold email, the panel caught two P0 claims that two sequential review loops had missed, for roughly 6% more tokens. The guidance is explicit that more loops is the wrong answer to "make it better" — past two, the blocker is a missing fact or a human decision.
+
 ## [1.2.0] — 2026-08-18
 
 ### Added
@@ -40,6 +46,7 @@ First public release.
 - Dual installation: plugin via marketplace, or clone into `~/.claude/skills/` where the bundled `.claude-plugin/plugin.json` loads the subagents.
 - Documentation set: installation, usage, configuration, architecture, troubleshooting, limitations, privacy and security, contributing, security policy.
 
+[1.3.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.3.0
 [1.2.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.2.0
 [1.1.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.1.0
 [1.0.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.0.0
