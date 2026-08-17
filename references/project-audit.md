@@ -26,6 +26,16 @@ Stop early when a source answers a question well.
 8. Tests and benchmarks — the only numbers you can quote without asking.
 9. `TODO`, `FIXME`, `WIP`, feature flags, stubs, `NotImplemented` — the boundary between shipped and promised.
 
+## The live surface outranks the repository
+
+If the product has a public site, check it before trusting the repo for anything a customer sees: price, plan names, trial length, the headline promise, what the plans include.
+
+A repository routinely lags production. Marketing copy, price tables and locale files are edited in place on the live site, or shipped from a branch that never came back. Writing a price from a stale file is the single most expensive audit error, and nothing downstream catches it — the number looks sourced, because it is.
+
+So: fetch the pricing and home page, record what they say with the date you checked, and record the disagreement itself as a finding. When the repo and production disagree, **production wins for anything customer-facing**, and the discrepancy goes to the user — it is usually a real bug they did not know they had.
+
+Same rule for a public app store listing, a docs site, or a status page.
+
 ## What to extract
 
 **Identity.** What the product does, in one sentence, using the words the repo uses. If the README's sentence and the code disagree, the code wins and the disagreement is a finding.
@@ -34,7 +44,7 @@ Stop early when a source answers a question well.
 
 **Shipped versus planned.** Two explicit lists. This is the single most valuable output of the audit — it is what stops the pipeline from promising a feature that does not exist.
 
-**Quotable proof.** Numbers with a source: benchmark output, test coverage, pricing, plan limits, supported formats, response times, user counts if they appear in a committed file. Each one gets `path:line`. No source means it does not exist for writing purposes.
+**Quotable proof.** Numbers with a source: benchmark output, test coverage, pricing, plan limits, supported formats, response times, user counts if they appear in a committed file. Each one gets `path:line`, or the live URL and the date you checked it. No source means it does not exist for writing purposes.
 
 **Vocabulary.** The nouns and verbs the product uses for its own concepts, and the ones it avoids. Copy that renames the product's own concepts reads as written by an outsider.
 

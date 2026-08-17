@@ -4,6 +4,18 @@ All notable changes to this project are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.1.0] — 2026-08-18
+
+Both changes come from the first end-to-end run of the pipeline on a live product.
+
+### Added
+
+- `references/project-audit.md` — the live surface now outranks the repository for anything customer-facing. A repo routinely lags production on price, plan names, and trial length; the audit fetches the public pricing and home page, records the date it checked, and reports any repo/production disagreement as a finding. In the first real run, the repository held two different price tables, both wrong against production — a cold email written from the repo would have quoted a false price.
+
+### Changed
+
+- `SKILL.md` and `references/three-pass-pipeline.md` — subagent prompts may pass the context file and reference files as absolute paths for the subagent to read itself, instead of pasting them. Pass outputs and the brief are still pasted verbatim.
+
 ## [1.0.0] — 2026-08-17
 
 First public release.
@@ -22,4 +34,5 @@ First public release.
 - Dual installation: plugin via marketplace, or clone into `~/.claude/skills/` where the bundled `.claude-plugin/plugin.json` loads the subagents.
 - Documentation set: installation, usage, configuration, architecture, troubleshooting, limitations, privacy and security, contributing, security policy.
 
+[1.1.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.1.0
 [1.0.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.0.0

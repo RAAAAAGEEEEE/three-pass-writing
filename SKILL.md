@@ -82,7 +82,7 @@ Run each pass as a **subagent**, so each one gets its own model and a clean cont
 
 Launch each with your subagent tool (`Task` in Claude Code, `Agent` in some clients), passing `subagent_type: "writing-drafter"` and so on. If the subagent type is not found, the plugin is not loaded: fall back to a general-purpose subagent and set the model override explicitly (`model: "sonnet"` / `model: "opus"`), and paste the matching file from `agents/` into the prompt. Say in one line which path you took.
 
-Each subagent prompt must contain: the full `.claude/writing-context.md`, the format profile, the brief, and — for passes 2 and 3 — the previous pass output verbatim.
+Each subagent prompt must give access to: `.claude/writing-context.md`, the format profile, the brief, and — for passes 2 and 3 — the previous pass output verbatim. Paste the brief and the previous pass output; for the context file and the reference files, an absolute path the subagent reads itself works as well and costs less. Never paraphrase a pass output before handing it over.
 
 Details, including what each pass returns, are in `references/three-pass-pipeline.md`.
 

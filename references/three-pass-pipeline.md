@@ -40,7 +40,9 @@ If those subagent types do not resolve, the plugin is not loaded. Fall back to a
 - The full findings list and the chosen opening
 - The writing context and the format profile (for the banned list and the length target)
 
-Never summarise a pass output before handing it to the next pass. Summarising is where fidelity dies.
+Never summarise a pass output before handing it to the next pass. Summarising is where fidelity dies — paste it verbatim, always.
+
+Files are different: the context file and the reference files can be passed as **absolute paths** for the subagent to read itself, instead of pasted. Same fidelity, lower cost, and the subagent starts by reading its own role file. Instruct it explicitly to read them first, in order, before doing anything else.
 
 ## Loop control
 

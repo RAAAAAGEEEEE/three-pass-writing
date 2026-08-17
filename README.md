@@ -24,7 +24,7 @@ Solo founders and small teams who write their own outreach, posts, landing copy 
 
 ## Status
 
-**v1.0.0 — beta.** Manifests validated with `claude plugin validate`, installation reproduced from a clean state (see [docs/INSTALLATION.md](docs/INSTALLATION.md)). The prose quality depends on the context file the bootstrap builds with you — a thin bootstrap produces thin copy. Read [docs/LIMITATIONS.md](docs/LIMITATIONS.md) before relying on it.
+**v1.1.0 — beta.** Manifests validated with `claude plugin validate`, installation reproduced from a clean state (see [docs/INSTALLATION.md](docs/INSTALLATION.md)), and the full pipeline run end to end on a live product — bootstrap, three passes, and the review loop stopping where it should. The prose quality depends on the context file the bootstrap builds with you: a thin bootstrap produces thin copy. Read [docs/LIMITATIONS.md](docs/LIMITATIONS.md) before relying on it.
 
 ## Requirements
 
