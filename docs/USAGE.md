@@ -10,6 +10,7 @@ Start Claude Code from the repository of the product you are writing about, then
 
 With no `.claude/writing-context.md` present, the skill runs the bootstrap:
 
+0. **Briefing** — before opening a single file, it tells you what it will read, what it will never read, what file it will create in your repo, and that it never sends anything. Then it waits for your yes. Say no and nothing is read.
 1. **Audit** — read-only pass over your repo. Produces a 15-line summary where every claim carries a `path:line`, plus a list of gaps.
 2. **Brainstorm** — at most three rounds, four questions per round, each with a proposed default so `ok` is a complete answer. The one question worth answering carefully: *send me one or two things you've written that sound right, and one that doesn't.*
 3. **Context file** — written to `.claude/writing-context.md`. Read it. Correct it. Your edits outrank anything the skill inferred.

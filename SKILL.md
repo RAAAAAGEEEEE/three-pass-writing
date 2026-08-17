@@ -30,6 +30,24 @@ If the current directory is not the user's product repository (no code, no READM
 
 ## Bootstrap
 
+### Step 0 — Brief the user, before reading anything
+
+The skill is about to read their repository. Nobody should discover that after the fact. Show this first, adapted to their language, and **wait for a yes**. Do not open a single file before they answer.
+
+> Avant de commencer, voici ce qui va se passer :
+>
+> **1. J'audite ce dépôt, en lecture seule** — README, doc, page d'accueil, tarifs, changelog, routes, tests. Une quinzaine de fichiers, pas plus. Je vérifie aussi votre site public s'il existe : un dépôt est souvent en retard sur la production, surtout sur les prix.
+> **2. Je ne lis jamais** vos `.env`, clés, identifiants ou données clients. Aucun secret n'entrera dans le fichier produit.
+> **3. Je vous pose ensuite quelques questions** — 4 à la fois, avec une proposition par défaut, pour cerner votre lecteur, votre promesse et votre ton. 10 minutes, une seule fois pour ce projet.
+> **4. J'écris `.claude/writing-context.md`** dans ce dépôt. Vous pouvez le corriger à la main, vos corrections priment. Il sera committé si vous committez : ni secret, ni plan non annoncé.
+> **5. Je n'envoie et ne publie jamais rien.** Je produis du texte, vous décidez de ce qui part.
+>
+> On est bien dans le dépôt du produit dont vous voulez parler ? On y va ?
+
+Two things this catches, both common: the session was started in the wrong directory, and the user did not realise a context file would land in their repository.
+
+If they decline the audit but still want copy, run the brainstorm alone and say plainly that the result rests on their answers, with nothing verified against the code.
+
 ### Step 1 — Audit (read-only)
 
 Follow `references/project-audit.md`.

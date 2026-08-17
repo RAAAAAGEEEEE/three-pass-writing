@@ -4,6 +4,12 @@ All notable changes to this project are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.2.0] — 2026-08-18
+
+### Added
+
+- `SKILL.md` — a bootstrap step 0: the skill briefs the user before opening any file (what it reads, what it never reads, the file it creates in their repo, that it never sends anything) and waits for a yes. Catches the two common cases — the session started in the wrong directory, and the user not expecting a context file in their repository.
+
 ## [1.1.0] — 2026-08-18
 
 Both changes come from the first end-to-end run of the pipeline on a live product.
@@ -34,5 +40,6 @@ First public release.
 - Dual installation: plugin via marketplace, or clone into `~/.claude/skills/` where the bundled `.claude-plugin/plugin.json` loads the subagents.
 - Documentation set: installation, usage, configuration, architecture, troubleshooting, limitations, privacy and security, contributing, security policy.
 
+[1.2.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.2.0
 [1.1.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.1.0
 [1.0.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.0.0
