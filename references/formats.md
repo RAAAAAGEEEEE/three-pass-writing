@@ -88,7 +88,7 @@ Rules
 Rules
 - Answer in the first sentence, even when the answer is no.
 - No blame, no defensiveness, no unearned apology stacking.
-- Do not promise a fix, a date, or a refund the user has not authorised — flag it as an open decision instead.
+- Do not promise a fix, a date, or a refund the user has not authorised; flag it as an open decision instead.
 - If it is a bug, say so plainly and say what happens next.
 
 ---
@@ -102,7 +102,7 @@ Rules
 - No keyword stuffing.
 - No claim the store listing cannot back: rankings, awards, user counts.
 - Pricing and subscription terms stated where the store requires it.
-- Screenshots' captions count as copy — write them.
+- Screenshots' captions count as copy: write them.
 
 ---
 

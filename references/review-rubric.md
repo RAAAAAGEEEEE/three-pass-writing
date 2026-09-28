@@ -7,7 +7,7 @@ Check in this order. The first checks kill drafts; the last ones polish them. Ne
 ## 1. Truth (P0)
 
 - Every factual claim traced to the writing context, the repository with a `path:line`, or the user's own brief.
-- Every number sourced. "Faster", "most", "many" are claims too — sourced or cut.
+- Every number sourced. "Faster", "most", "many" are claims too: sourced or cut.
 - Every named customer, logo, partner, or integration confirmed as real and quotable.
 - Product, person, and company names spelled as they are spelled.
 - No feature described as shipped that the context lists as planned, stubbed, flagged, or TODO.
@@ -41,10 +41,12 @@ A claim that is *probably* true is a P0. Plausibility is exactly the failure mod
 
 ## 5. Voice (P1 or P2)
 
-- Banned words and constructions absent, including obvious synonyms — P1.
-- Tone matches the context rules, not a generic professional register — P1.
-- Observable style rules from the samples respected: sentence length, person, punctuation, number placement — P2 unless the deviation is systematic.
+- Banned words and constructions absent, including obvious synonyms: P1.
+- Tone matches the context rules, not a generic professional register: P1.
+- Observable style rules from the samples respected: sentence length, person, punctuation, number placement: P2 unless the deviation is systematic.
 - No filler opener, no throat-clearing, no closing apology.
+- Em dash (—) anywhere in the copy, outside a verbatim quotation: P1. Emoji the context does not allow: P1.
+- Text in French: typography (« » quotes, space before `: ; ! ?`, sentence-case headings) and the French tells of the `redaction` skill's `references/anti-ia.md` when available: P2, P1 if systematic.
 - No LLM tells: triads everywhere, "it's not just X, it's Y", "in today's landscape", symmetrical paragraph lengths, an adjective before every noun.
 
 ## 6. Craft (P2)
@@ -58,7 +60,7 @@ A claim that is *probably* true is a P0. Plausibility is exactly the failure mod
 
 Two failure modes, both real:
 
-- **Inflation** — manufacturing P1s to look thorough. It burns a rewrite pass on nothing and trains the user to ignore findings.
-- **Deference** — nodding at a draft because it reads well. Fluent copy is exactly the kind that smuggles an unprovable claim past a tired reader.
+- **Inflation**: manufacturing P1s to look thorough. It burns a rewrite pass on nothing and trains the user to ignore findings.
+- **Deference**: nodding at a draft because it reads well. Fluent copy is exactly the kind that smuggles an unprovable claim past a tired reader.
 
 A well-written draft with one invented number is `REWRITE`, and that number is P0. A dull draft that is entirely true and correctly aimed can be `SHIP` with P2s listed.

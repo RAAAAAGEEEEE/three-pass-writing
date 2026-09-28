@@ -18,18 +18,18 @@ The default, which works and is worth beating rather than replacing:
 
 ```
 Subject     3–5 words, lowercase, concrete, no promise
-Line 1      the signal — why them, specifically, verifiably
+Line 1      the signal: why them, specifically, verifiably
 Line 2–3    the pain, in their words, not the product's
-Line 4–5    what the product does about it — one sentence, one proof
+Line 4–5    what the product does about it: one sentence, one proof
 Last line   one ask, small, with zero setup cost
 ```
 
 **Target: 80–120 words.** Every word past 120 lowers the reply rate for the same content. Under 50 usually means the signal or the proof was dropped.
 
 Variants worth testing in pass 1's alternative openings:
-- **Signal-first** — quote the trigger, then the offer. Highest reply rate when the signal is real.
-- **Result-first** — the outcome for a comparable company, then the ask. Requires a quotable result.
-- **Question-first** — one specific question about their process. Lowest commitment, best for starting a conversation rather than booking a call.
+- **Signal-first**: quote the trigger, then the offer. Highest reply rate when the signal is real.
+- **Result-first**: the outcome for a comparable company, then the ask. Requires a quotable result.
+- **Question-first**: one specific question about their process. Lowest commitment, best for starting a conversation rather than booking a call.
 
 ## The ask
 
@@ -58,9 +58,9 @@ Do not use: personal details found by aggregating sources, family, location beyo
 
 The test: if the reader asks "how do you know that?", the answer must be a public link they would expect you to have seen.
 
-## Compliance — write it in, do not work around it
+## Compliance: write it in, do not work around it
 
-Depending on the reader's jurisdiction, cold B2B email is regulated (GDPR/ePrivacy in the EU, CAN-SPAM in the US, PECR in the UK, CASL in Canada, and others). The rules differ, they change, and this file is not legal advice — but the following belong in the message and cost nothing:
+Depending on the reader's jurisdiction, cold B2B email is regulated (GDPR/ePrivacy in the EU, CAN-SPAM in the US, PECR in the UK, CASL in Canada, and others). The rules differ, they change, and this file is not legal advice, but the following belong in the message and cost nothing:
 
 - Real sender identity: name, company, and a valid postal or business address where required.
 - A working, one-click way to opt out, honoured immediately.
@@ -76,20 +76,20 @@ Copy is not the lever people think it is. Reply rate collapses from bad targetin
 
 - One link at most in a first message; zero is often better.
 - No attachments.
-- No tracking pixel in a first message — it earns nothing and costs trust.
+- No tracking pixel in a first message: it earns nothing and costs trust.
 - Plain text, no image-only body, no heavy formatting.
 - The same message readable on a phone in five seconds.
 
 ## Follow-ups
 
 - Two follow-ups at most, four to seven days apart, then stop.
-- Each one adds something new — a different angle, a new proof, a smaller ask. Never "just bumping this".
+- Each one adds something new: a different angle, a new proof, a smaller ask. Never "just bumping this".
 - Shorter each time. The third message should be one or two lines.
 - After the last one, say it is the last one and mean it.
 
 ## What pass 2 checks hardest here
 
-- The signal in line 1 is verifiable and correctly attributed. Getting the reader's own facts wrong is the most expensive error in the format — it is a P0.
+- The signal in line 1 is verifiable and correctly attributed. Getting the reader's own facts wrong is the most expensive error in the format: it is a P0.
 - No claimed result, customer, or number that the writing context cannot back.
 - One ask.
 - Under 120 words.

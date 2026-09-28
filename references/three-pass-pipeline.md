@@ -1,6 +1,6 @@
 # The three-pass pipeline
 
-One model drafts, a stronger model attacks the draft, the first model repairs it. The point is not "more passes" — it is that **the critic never writes and the writer never judges its own work**. A model reviewing its own output defends it; a model reviewing someone else's cuts it.
+One model drafts, a stronger model attacks the draft, the first model repairs it. The point is not "more passes": it is that **the critic never writes and the writer never judges its own work**. A model reviewing its own output defends it; a model reviewing someone else's cuts it.
 
 ## Why the models are split this way
 
@@ -10,7 +10,7 @@ One model drafts, a stronger model attacks the draft, the first model repairs it
 | 2 Review | Opus | Better at catching an unprovable claim, a wrong reader, a structural flaw. Left alone it writes correct, flat copy. |
 | 3 Rewrite | Sonnet | Applies the fixes while keeping the voice. |
 
-Each pass runs as a subagent: separate context, no memory of the others except what you paste in. That isolation is the mechanism — pass 2 must meet the draft as a stranger would.
+Each pass runs as a subagent: separate context, no memory of the others except what you paste in. That isolation is the mechanism: pass 2 must meet the draft as a stranger would.
 
 ## Launching the passes
 
@@ -24,23 +24,23 @@ If those subagent types do not resolve, the plugin is not loaded. Fall back to a
 
 ## What each prompt must contain
 
-**Pass 1 — drafter**
+**Pass 1: drafter**
 - The full contents of `.claude/writing-context.md`
 - The format profile from `references/formats.md`, or `references/cold-outreach.md`
 - The brief: goal, reader, channel, length, constraints, deadline
 - Any raw material the user supplied (notes, an old version, a transcript)
 
-**Pass 2 — reviewer**
+**Pass 2: reviewer**
 - Everything pass 1 received
 - The draft, the three alternative openings, and the facts list, verbatim
 - `references/review-rubric.md`
 
-**Pass 3 — rewriter**
+**Pass 3: rewriter**
 - The draft, verbatim
 - The full findings list and the chosen opening
 - The writing context and the format profile (for the banned list and the length target)
 
-Never summarise a pass output before handing it to the next pass. Summarising is where fidelity dies — paste it verbatim, always.
+Never summarise a pass output before handing it to the next pass. Summarising is where fidelity dies; paste it verbatim, always.
 
 Files are different: the context file and the reference files can be passed as **absolute paths** for the subagent to read itself, instead of pasted. Same fidelity, lower cost, and the subagent starts by reading its own role file. Instruct it explicitly to read them first, in order, before doing anything else.
 
@@ -64,11 +64,11 @@ Skipping is allowed, and saying so is mandatory.
 - **User supplied the text and wants a critique**: run pass 2 alone, return the findings, and ask before rewriting.
 - **User explicitly asks for a fast draft**: pass 1 alone, and state plainly that it has not been reviewed.
 
-Never skip pass 2 on anything that leaves the building — outreach, a published post, landing copy, a customer-facing announcement.
+Never skip pass 2 on anything that leaves the building: outreach, a published post, landing copy, a customer-facing announcement.
 
 ## Widen before you deepen
 
-Two full loops is the ceiling, and it is a real one: past it, each rewrite regresses the text toward the mean — smoother, safer, less able to survive a reader who gets twenty of these a day. The blocker at that point is a missing fact or a human decision, and no pass produces either.
+Two full loops is the ceiling, and it is a real one: past it, each rewrite regresses the text toward the mean: smoother, safer, less able to survive a reader who gets twenty of these a day. The blocker at that point is a missing fact or a human decision, and no pass produces either.
 
 When a piece matters enough to spend more, spend it on **width**, not depth:
 
@@ -82,7 +82,7 @@ When a piece matters enough to spend more, spend it on **width**, not depth:
 
 Five calls instead of four, and it finds more. A judge comparing three drafts sees what a reviewer facing one draft cannot: a claim only looks safe until a sibling draft states it differently. Measured on one real cold email, the panel caught two P0s that two sequential loops had missed, for about 6% more tokens.
 
-Pick the angles so they genuinely diverge — the comparison, the proof delivered first, the reader's own point of view. Three drafts of the same idea teach the judge nothing.
+Pick the angles so they genuinely diverge: the comparison, the proof delivered first, the reader's own point of view. Three drafts of the same idea teach the judge nothing.
 
 Use it for a campaign, a home page, an announcement that goes out once. Not for a changelog.
 
@@ -90,7 +90,7 @@ Use it for a campaign, a home page, an announcement that goes out once. Not for 
 
 The panel above widens the *drafting*. The council widens the *checking*: instead of one reviewer looking for everything at once, several reviewers each get a single lens, and an arbiter merges them.
 
-It works because the failure modes are unrelated. A false claim, a reader who stops at line 2, a doubled CTA and a banned word are four different searches. One reviewer holding all four in mind does the first one well and the rest at half attention — and once it has found a P0, it stops looking as hard.
+It works because the failure modes are unrelated. A false claim, a reader who stops at line 2, a doubled CTA and a banned word are four different searches. One reviewer holding all four in mind does the first one well and the rest at half attention, and once it has found a P0, it stops looking as hard.
 
 Four lenses, each an Opus subagent given `agents/writing-reviewer.md` plus its own assignment. **A member reports only inside its lens** and stays silent elsewhere:
 
@@ -101,18 +101,18 @@ Four lenses, each an Opus subagent given `agents/writing-reviewer.md` plus its o
 | Structure & ask | format profile, length, one CTA, what happens after the yes | P1 |
 | Voice | banned words and synonyms, style rules from the samples, LLM tells | P1/P2 |
 
-Then one arbiter — Opus, given every member's output verbatim:
+Then one arbiter (Opus), given every member's output verbatim:
 
 - merges duplicates (three members flagging the same sentence is one finding);
-- **rejects any finding that does not quote the text** — an unanchored finding is noise;
+- **rejects any finding that does not quote the text**: an unanchored finding is noise;
 - resolves conflicts (the reader lens wants a line the voice lens wants cut) and says which won;
 - returns **one** ranked list and **one** verdict.
 
 Without the arbiter this degrades fast: four lists, overlapping severities, nothing the rewriter can act on.
 
-Cost: 6 calls, 5 of them Opus. Use it where being wrong is expensive — a campaign about to go to thousands of recipients, a home page, a public announcement, anything with a legal surface. For a normal piece, one reviewer with the rubric finds the same P0s at a fifth of the price.
+Cost: 6 calls, 5 of them Opus. Use it where being wrong is expensive: a campaign about to go to thousands of recipients, a home page, a public announcement, anything with a legal surface. For a normal piece, one reviewer with the rubric finds the same P0s at a fifth of the price.
 
-**Do not add lenses to make it feel thorough.** A fifth reviewer with no distinct search only produces findings the others already covered, and every extra member raises the odds of inflated severity — the failure mode the rubric warns about.
+**Do not add lenses to make it feel thorough.** A fifth reviewer with no distinct search only produces findings the others already covered, and every extra member raises the odds of inflated severity, the failure mode the rubric warns about.
 
 ## Cost
 

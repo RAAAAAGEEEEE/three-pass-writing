@@ -4,6 +4,18 @@ All notable changes to this project are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.0] - 2026-09-28
+
+### Added
+
+- `SKILL.md`: two invariants, no em dash in the copy and no emoji unless the writing context allows them; a "Writing in French" section that hands the three passes the French rules of the `redaction` skill when it is installed.
+- `references/review-rubric.md`: em dash and unallowed emoji are P1; French typography and French AI-writing tells are checked for text in French.
+- `agents/writing-drafter.md`: the no-em-dash and no-emoji rules.
+
+### Changed
+
+- Every file a pass reads (`SKILL.md`, `agents/`, `references/`, `assets/`) is rewritten without em dashes, so the instructions no longer model the punctuation the copy must avoid.
+
 ## [1.4.0] — 2026-08-18
 
 ### Added
@@ -52,6 +64,7 @@ First public release.
 - Dual installation: plugin via marketplace, or clone into `~/.claude/skills/` where the bundled `.claude-plugin/plugin.json` loads the subagents.
 - Documentation set: installation, usage, configuration, architecture, troubleshooting, limitations, privacy and security, contributing, security policy.
 
+[1.5.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.5.0
 [1.4.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.4.0
 [1.3.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.3.0
 [1.2.0]: https://github.com/RAAAAAGEEEEE/three-pass-writing/releases/tag/v1.2.0

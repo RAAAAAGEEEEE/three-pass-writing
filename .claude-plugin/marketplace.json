@@ -9,7 +9,7 @@
     {
       "name": "three-pass-writing",
       "displayName": "Three-Pass Writing",
-      "version": "1.4.0",
+      "version": "1.5.0",
       "description": "Write product copy with a three-pass pipeline (Sonnet draft, Opus critique, Sonnet rewrite) grounded in a read-only audit of your own repository.",
       "license": "MIT",
       "keywords": ["writing", "copywriting", "cold-outreach", "multi-model"],
