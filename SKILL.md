@@ -1,6 +1,15 @@
 ---
 name: three-pass-writing
-description: Use when the user wants to write, draft, rewrite or improve any user-facing text for their own product: cold outreach email, X/LinkedIn post, landing page copy, changelog, release note, docs page, support reply, app store description. Runs a three-pass pipeline (fast-model draft, deep-model critique, fast-model rewrite) grounded in a read-only audit of the user's own repository plus a short brainstorm, so the copy only claims what the product actually does. For text in French, also load the `redaction` skill if installed (French typography, AI-writing tells). Trigger on "write an email", "cold outreach", "write a post", "rewrite this copy", "improve this text", "landing page copy", "changelog entry", "make this punchier", "draft an announcement". Also trigger when the user asks to set up, refresh or audit their writing context.
+description: >-
+  Use when the user wants to write, draft, rewrite or improve any user-facing text for their own
+  product: cold outreach email, X/LinkedIn post, landing page copy, changelog, release note, docs
+  page, support reply, app store description. Runs a three-pass pipeline (fast-model draft, deep-model
+  critique, fast-model rewrite) grounded in a read-only audit of the user's own repository plus a
+  short brainstorm, so the copy only claims what the product actually does. For text in French, also
+  load the `redaction` skill if installed (French typography, AI-writing tells). Trigger on "write an
+  email", "cold outreach", "write a post", "rewrite this copy", "improve this text", "landing page
+  copy", "changelog entry", "make this punchier", "draft an announcement". Also trigger when the user
+  asks to set up, refresh or audit their writing context.
 license: MIT
 compatibility: Designed for Claude Code v2.1.220 or later, which runs the three passes as subagents pinned to different models (Sonnet, Opus, Sonnet). In an agent without subagents the passes run inline and the model split is lost. Needs read access to the project repository. No network access.
 metadata:

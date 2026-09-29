@@ -14,6 +14,7 @@ The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and
 
 ### Changed
 
+- `SKILL.md`: `description` is now a folded YAML block, because the previous plain scalar contained `: ` and was not valid YAML for strict parsers.
 - `SKILL.md`: the non-portable `effort` key becomes `metadata.recommended-effort`, and `when_to_use` is merged into `description`. The `effort` key stays in `agents/*.md`, where it is a supported Claude Code subagent field (documented in `docs/CONFIGURATION.md`).
 - Docs: validation command is now `claude plugin validate . --strict`.
 
