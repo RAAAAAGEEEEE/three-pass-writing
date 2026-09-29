@@ -24,7 +24,7 @@ Solo founders and small teams who write their own outreach, posts, landing copy 
 
 ## Status
 
-**v1.5.0, beta.** Manifests validated with `claude plugin validate`, installation reproduced from a clean state (see [docs/INSTALLATION.md](docs/INSTALLATION.md)), and the full pipeline run end to end on a live product — bootstrap, three passes, and the review loop stopping where it should. The prose quality depends on the context file the bootstrap builds with you: a thin bootstrap produces thin copy. Read [docs/LIMITATIONS.md](docs/LIMITATIONS.md) before relying on it.
+**v1.5.1, beta.** Manifests validated with `claude plugin validate --strict`, installation reproduced from a clean state (see [docs/INSTALLATION.md](docs/INSTALLATION.md)), and the full pipeline run end to end on a live product — bootstrap, three passes, and the review loop stopping where it should. The prose quality depends on the context file the bootstrap builds with you: a thin bootstrap produces thin copy. Read [docs/LIMITATIONS.md](docs/LIMITATIONS.md) before relying on it.
 
 ## Requirements
 
@@ -123,7 +123,11 @@ The honest list is in [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
 
 ## Roadmap
 
-Non-contractual, in rough order: a `/writing-context refresh` path that diffs the repo since the last audit; per-format sample libraries derived from the user's own accepted pieces; an eval set for the review rubric.
+Non-contractual, in rough order: a `/writing-context refresh` path that diffs the repo since the last audit; per-format sample libraries derived from the user's own accepted pieces; running the eval set in `evals/` and extending it to the review rubric.
+
+## Evals
+
+Four cases in [`evals/`](evals/) check the invariants that matter most: an unsourced number is flagged, no em dash or emoji in the copy, nothing is ever sent, and the bootstrap runs before any writing. They follow the `claude plugin eval` format, which is early access. They have not been run yet, see [docs/LIMITATIONS.md](docs/LIMITATIONS.md).
 
 ## Contributing
 

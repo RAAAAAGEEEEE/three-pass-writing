@@ -4,6 +4,19 @@ All notable changes to this project are documented here.
 
 The format follows [Keep a Changelog](https://keepachangelog.com/en/1.1.0/), and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [1.5.1] - 2026-09-29
+
+### Added
+
+- `evals/`: four `claude plugin eval` cases (unsourced claim flagged, no em dash or emoji, never sends, bootstrap before writing). Not yet run, see `docs/LIMITATIONS.md`.
+- `SKILL.md` frontmatter: `compatibility` and `metadata` (author, version, repository, recommended-effort).
+- `docs/CONFIGURATION.md`: effort and model pinning section.
+
+### Changed
+
+- `SKILL.md`: the non-portable `effort` key becomes `metadata.recommended-effort`, and `when_to_use` is merged into `description`. The `effort` key stays in `agents/*.md`, where it is a supported Claude Code subagent field (documented in `docs/CONFIGURATION.md`).
+- Docs: validation command is now `claude plugin validate . --strict`.
+
 ## [1.5.0] - 2026-09-28
 
 ### Added

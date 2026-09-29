@@ -49,3 +49,7 @@ One context file describes one product. Monorepos need one file per product surf
 ## Not evaluated
 
 There is no eval set for the review rubric yet. Nobody has measured how often pass 2 catches a planted false claim. It is on the roadmap; until then, treat the review as a strong reader, not a verified filter.
+
+## The evals have not been run
+
+`evals/` holds four cases written to the `claude plugin eval` format. That command is early access and was not usable in Claude Code 2.1.220 when 1.5.1 was released, so the cases are checked for valid YAML frontmatter only, not scored. Treat them as executable specifications until a first run is recorded in the changelog.

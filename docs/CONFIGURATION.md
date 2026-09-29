@@ -60,3 +60,9 @@ Monorepos: put a context file in each package directory that has its own product
 ```
 
 The audit runs again, the differences are shown against the current file, and nothing is overwritten before you agree. Worth doing after a release that changes what is shipped, a pricing change, or a repositioning.
+
+## Effort and model pinning
+
+The three files in `agents/` set `model` and `effort` in their frontmatter: `sonnet` and `high` for passes 1 and 3, `opus` and `high` for pass 2. `effort` is a Claude Code subagent field ([sub-agents reference](https://code.claude.com/docs/en/sub-agents)); it overrides the session effort while that subagent runs. It is kept in `agents/` because those files are Claude Code plugin components, not portable skill files. Remove the line from an agent file to let that pass inherit the session effort.
+
+`SKILL.md` carries no `effort` key, so its frontmatter stays portable. The recommended effort is recorded as `metadata.recommended-effort: high`. It is informational: set it yourself with `/effort` if you want the orchestrating session to match.

@@ -31,8 +31,10 @@ This is a writing skill, so its own text is held to its own rubric.
 Validate the manifests:
 
 ```bash
-claude plugin validate .
+claude plugin validate . --strict
 ```
+
+If you change behaviour the evals describe, update the matching case in `evals/<case>/` (a `prompt.md` and a `graders/` folder, see the [plugin evals reference](https://code.claude.com/docs/en/plugin-evals)). Run them with `claude plugin eval .` when your Claude Code build offers it.
 
 Install the branch locally and run one real piece through it end to end:
 
