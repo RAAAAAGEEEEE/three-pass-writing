@@ -12,6 +12,22 @@ Three passes, three subagents, two models:
 
 The point is not "more passes". It is that a model reviewing its own output defends it, and a model reviewing someone else's cuts it.
 
+## How it works (Comment ça marche)
+
+Three steps for a beginner, and no pasting the repository into the conversation:
+
+1. **Install the skill once**: `git clone https://github.com/RAAAAAGEEEEE/three-pass-writing ~/.claude/skills/three-pass-writing`
+   (available in all your projects), or the same clone into `.claude/skills/three-pass-writing` at the root of a
+   project (that project only). In Windows PowerShell, replace `~` with `$env:USERPROFILE`. The plugin
+   route and details are in [docs/INSTALLATION.md](docs/INSTALLATION.md).
+2. **Ask for it**: from your product's repository, just write "write a cold email to agency owners", or type `/three-pass-writing` followed by your request.
+3. **Follow along**: the first run audits the repo read-only and builds `.claude/writing-context.md` with you; then Sonnet drafts, Opus critiques and Sonnet rewrites.
+
+This is how every Claude Code skill works: a folder with a `SKILL.md` in `~/.claude/skills/<name>/`
+(personal) or `.claude/skills/<name>/` (project); Claude loads it automatically when your request matches
+its `description`, and `/<name>` runs it by hand.
+[official: [skills](https://code.claude.com/docs/en/skills#where-skills-live), checked 2026-10-05]
+
 ## The problem it solves
 
 Ask any model to write a cold email about your product and you get fluent copy that promises a feature you never shipped, quotes a number nobody measured, and opens with a line that would work for any product on earth.
@@ -94,7 +110,7 @@ STILL OPEN
 
 Illustrative example, not a recorded transcript.
 
-## How it works
+## How the pipeline works
 
 `SKILL.md` is the entry point and stays small. It routes to reference files that load only when needed: the audit procedure, the brainstorm protocol, the pipeline mechanics, the review rubric, the format profiles. The three passes run as subagents defined in `agents/`, each pinned to its model.
 
